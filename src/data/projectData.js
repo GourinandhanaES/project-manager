@@ -52,7 +52,7 @@ export const projectData = [
       {
         id: "r1",
         date: "2025-01-20",
-        description: "Client review meeting"
+        title: "Client review meeting"
       },
       {
         id: "r2",
