@@ -1,16 +1,59 @@
-# React + Vite
+# Project Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive **Project Management Dashboard** built with **React** and **Tailwind CSS**.  
+Supports projects, tasks, reminders, and dark/light mode with **localStorage** persistence.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Project Management**
+  - Create, edit, and view projects
+  - Fields: Name, Description, Start & End Dates, Manager, Assignees, Status, Priority
+- **Task Management**
+  - Add tasks to projects
+  - Task fields: Name, Description, Assigned User, Status
+  - Automatic completion percentage calculation
+- **Reminder Management**
+  - Add multiple reminders per project
+  - Fields: Date & Description
+  - Upcoming reminders highlighted
+- **Dashboard & Sidebar**
+  - Filters: All, Completed, Pending, On Hold, Near Deadline
+  - Sidebar with company logo, project filters, and theme toggle
+- **Dark/Light Mode**
+  - Toggleable via sidebar
+  - Preference saved in localStorage
+- **Persistence**
+  - All data stored in localStorage
+- **Responsive UI**
+  - Works on mobile, tablet, and desktop
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Technologies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React, Tailwind CSS, React Router
+- Context API for theme
+- `uuid` for unique IDs
+- Lucide-react icons
+- Vite build tool
+
+---
+
+## Project Structure
+ components : ProjectCard, ProjectModal, TaskList, ReminderList, Sidebar, ProgressBar
+ pages : Dashboard, ProjectDetails
+ context: ThemeContext (for dark mode)
+ data: projectData.js (for dummy datas)
+ utils: localStorage.js (for locally storing project details)
+ App.jsx
+
+## Installation
+
+```bash
+git clone https://github.com/your-username/project-manager.git
+cd project-manager
+npm install
+npm run dev
+
